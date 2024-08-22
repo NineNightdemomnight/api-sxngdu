@@ -19,8 +19,9 @@ app.get('/about', (req, res) => {
 app.get('/check-code', (req, res) => {
     const { code } = req.query; // รับรหัสจาก query parameter
 
-    if (code === apiKey) {
-        res.send('Welcome to API SXNGDU');
+ 
+        if (code === apiKey) {
+        res.send('success'); 
     } else {
         res.status(403).send('Unauthorized'); // ใช้รหัสสถานะ 403 สำหรับการเข้าถึงที่ไม่ได้รับอนุญาต
     }
